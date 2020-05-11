@@ -49,7 +49,7 @@ if (theme === 'light')
 const App = () => {
   return (
     <div>
-      <BrowserRouter basename="/pldd-frontend-react">
+      <BrowserRouter basename="/pldds">
               <ThemeProvider theme={setTheme} >
             <CssBaseline>
         <NavBar style={{ marginTop: "1px" }} />
