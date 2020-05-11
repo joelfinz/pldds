@@ -50,7 +50,7 @@
     }
   ],
   "scope": "/",
-  "start_url": "/pldd-frontend-react/",
+  "start_url": "/pldds/",
   "display": "standalone",
   "orientation": "portrait",
   "theme_color": "#000000",
