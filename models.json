@@ -1,0 +1,1312 @@
+{
+  "models": [
+    {
+      "model_name": "5C32N1D",
+      "model_fullname": "5-conv-32-nodes-1-dense",
+      "model_filename": "5-conv-32-nodes-1-dense-1583918600.h5"
+    },
+    {
+      "model_name": "4C64N1D",
+      "model_fullname": "4-conv-64-nodes-1-dense",
+      "model_filename": "4-conv-64-nodes-1-dense-1583918419.h5"
+    },
+    {
+      "model_name": "4C32N2D",
+      "model_fullname": "4-conv-32-nodes-2-dense",
+      "model_filename": "4-conv-32-nodes-2-dense-1583918276.h5"
+    },
+    {
+      "model_name": "5C128N2D",
+      "model_fullname": "5-conv-128-nodes-2-dense",
+      "model_filename": "5-conv-128-nodes-2-dense-1583918748.h5"
+    },
+    {
+      "model_name": "4C32N0D",
+      "model_fullname": "4-conv-32-nodes-0-dense",
+      "model_filename": "4-conv-32-nodes-0-dense-1583918136.h5"
+    },
+    {
+      "model_name": "4C16N0D",
+      "model_fullname": "4-conv-16-nodes-0-dense",
+      "model_filename": "4-conv-16-nodes-0-dense-1583917885.h5"
+    },
+    {
+      "model_name": "4C16N1D",
+      "model_fullname": "4-conv-16-nodes-1-dense",
+      "model_filename": "4-conv-16-nodes-1-dense-1583918010.h5"
+    },
+    {
+      "model_name": "3C64N1D",
+      "model_fullname": "3-conv-64-nodes-1-dense",
+      "model_filename": "3-conv-64-nodes-1-dense-1583917688.h5"
+    },
+    {
+      "model_name": "3C32N3D",
+      "model_fullname": "3-conv-32-nodes-3-dense",
+      "model_filename": "3-conv-32-nodes-3-dense-1583917539.h5"
+    },
+    {
+      "model_name": "3C32N1D",
+      "model_fullname": "3-conv-32-nodes-1-dense",
+      "model_filename": "3-conv-32-nodes-1-dense-1583917291.h5"
+    }
+  ],
+  "model_list": [
+    {
+      "5C32N1D": {
+        "rank": 1,
+        "model_name": "5C32N1D",
+        "model_fullname": "5-conv-32-nodes-1-dense",
+        "model_filename": "5-conv-32-nodes-1-dense-1583918600.h5",
+        "lowest_validation_loss": 0.15605,
+        "highest_validation_acc": 0.9448,
+        "model_props":{
+          "conv":5,
+          "nodes":32,
+          "dense":1
+        },
+        "model_profile":{
+          "model_desc_name":"sequential_8",
+          "model_table": [
+          {
+            "layer_type":"conv2d_29",
+            "layer_cat":"Conv2D",
+            "output_shape":"None, 248, 248, 5",
+            "param_num":"140"
+          },
+          {
+            "layer_type":"activation_46",
+            "layer_cat":"Activation",
+            "output_shape":"None, 248, 248, 5",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"max_pooling2d_29",
+            "layer_cat":"MaxPooling 2D",
+            "output_shape":"None, 248, 248, 5",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"conv2d_30",
+            "layer_cat":"Conv2D",
+            "output_shape":"None, 124, 124, 32",
+            "param_num":"192"
+          },
+          {
+            "layer_type":"activation_47",
+            "layer_cat":"Activation",
+            "output_shape":"None, 124, 124, 32",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"max_pooling2d_30",
+            "layer_cat":"MaxPooling 2D",
+            "output_shape":"None, 62, 62, 32",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"conv2d_31",
+            "layer_cat":"Conv2D",
+            "output_shape":"None, 62, 62, 32",
+            "param_num":"1056"
+          },
+          {
+            "layer_type":"activation_48",
+            "layer_cat":"Activation",
+            "output_shape":"None, 62, 62, 32",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"max_pooling2d_31",
+            "layer_cat":"MaxPooling 2D",
+            "output_shape":"None, 31, 31, 32",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"conv2d_32",
+            "layer_cat":"Conv2D",
+            "output_shape":"None, 31, 31, 32",
+            "param_num":"1056"
+          },
+          {
+            "layer_type":"activation_49",
+            "layer_cat":"Activation",
+            "output_shape":"None, 31, 31, 32",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"max_pooling2d_32",
+            "layer_cat":"MaxPooling 2D",
+            "output_shape":"None, 15, 15, 32",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"conv2d_33",
+            "layer_cat":"Conv2D",
+            "output_shape":"None, 15, 15, 32",
+            "param_num":"1056"
+          },
+          {
+            "layer_type":"activation_50",
+            "layer_cat":"Activation",
+            "output_shape":"None, 15, 15, 32",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"max_pooling2d_33",
+            "layer_cat":"MaxPooling 2D",
+            "output_shape":"None, 7, 7, 32",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"flatten_8",
+            "layer_cat":"Flatten",
+            "output_shape":"None, 1568",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"dense_17",
+            "layer_cat":"Dense",
+            "output_shape":"None, 32",
+            "param_num":"50208"
+          },
+          {
+            "layer_type":"activation_51",
+            "layer_cat":"Activation",
+            "output_shape":"None, 32",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"dense_18",
+            "layer_cat":"Dense",
+            "output_shape":"None, 3",
+            "param_num":"99"
+          },
+          {
+            "layer_type":"activation_52",
+            "layer_cat":"Activation",
+            "output_shape":"None, 3",
+            "param_num":"0"
+          }
+        ],
+          "total_params":"53,807",
+          "trainable_params":"53,807",
+          "non_trainable_params":"0"
+        }
+      }
+    },
+    {
+      "4C64N1D": {
+        "rank": 2,
+        "model_name": "4C64N1D",
+        "model_fullname": "4-conv-64-nodes-1-dense",
+        "model_filename": "4-conv-64-nodes-1-dense-1583918419.h5",
+        "lowest_validation_loss": 0.19401,
+        "highest_validation_acc": 0.9613,
+        "model_props":{
+          "conv":4,
+          "nodes":64,
+          "dense":1
+        },
+        "model_profile":{
+          "model_desc_name":"sequential_7",
+          "model_table": [
+          {
+            "layer_type":"conv2d_25",
+            "layer_cat":"Conv2D",
+            "output_shape":"None, 248, 248, 4",
+            "param_num":"112"
+          },
+          {
+            "layer_type":"activation_40",
+            "layer_cat":"Activation",
+            "output_shape":"None, 248, 248, 4",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"max_pooling2d_25",
+            "layer_cat":"MaxPooling 2D",
+            "output_shape":"None, 124, 124, 4",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"conv2d_26",
+            "layer_cat":"Conv2D",
+            "output_shape":"None, 124, 124, 64",
+            "param_num":"320"
+          },
+          {
+            "layer_type":"activation_41",
+            "layer_cat":"Activation",
+            "output_shape":"None, 124, 124, 64",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"max_pooling2d_26",
+            "layer_cat":"MaxPooling 2D",
+            "output_shape":"None, 62, 62, 64",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"conv2d_27",
+            "layer_cat":"Conv2D",
+            "output_shape":"None, 62, 62, 64",
+            "param_num":"4160"
+          },
+          {
+            "layer_type":"activation_42",
+            "layer_cat":"Activation",
+            "output_shape":"None, 62, 62, 64",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"max_pooling2d_27",
+            "layer_cat":"MaxPooling 2D",
+            "output_shape":"None, 31, 31, 64",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"conv2d_28",
+            "layer_cat":"Conv2D",
+            "output_shape":"None, 31, 31, 64",
+            "param_num":"4160"
+          },
+          {
+            "layer_type":"activation_43",
+            "layer_cat":"Activation",
+            "output_shape":"None, 31, 31, 64",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"max_pooling2d_28",
+            "layer_cat":"MaxPooling 2D",
+            "output_shape":"None, 15, 15, 64",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"flatten_7",
+            "layer_cat":"Flatten",
+            "output_shape":"None, 14400",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"dense_15",
+            "layer_cat":"Dense",
+            "output_shape":"None, 64",
+            "param_num":"921664"
+          },
+          {
+            "layer_type":"activation_44",
+            "layer_cat":"Activation",
+            "output_shape":"None, 64",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"dense_16",
+            "layer_cat":"Dense",
+            "output_shape":"None, 3",
+            "param_num":"195"
+          },
+          {
+            "layer_type":"activation_45",
+            "layer_cat":"Activation",
+            "output_shape":"None, 3",
+            "param_num":"0"
+          }
+        ],
+          "total_params":"930,611",
+          "trainable_params":"930,611",
+          "non_trainable_params":"0"
+        }
+      }
+    },
+    {
+      "4C32N2D": {
+        "rank": 3,
+        "model_name": "4C32N2D",
+        "model_fullname": "4-conv-32-nodes-2-dense",
+        "model_filename": "4-conv-32-nodes-2-dense-1583918276.h5",
+        "lowest_validation_loss": 0.23565,
+        "highest_validation_acc": 0.9227,
+        "model_props":{
+          "conv":4,
+          "nodes":32,
+          "dense":2
+        },
+        "model_profile":{
+          "model_desc_name":"sequential_6",
+          "model_table": [
+          {
+            "layer_type":"conv2d_21",
+            "layer_cat":"Conv2D",
+            "output_shape":"None, 248, 248, 4",
+            "param_num":"112"
+          },
+          {
+            "layer_type":"activation_33",
+            "layer_cat":"Activation",
+            "output_shape":"None, 248, 248, 4",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"max_pooling2d_21",
+            "layer_cat":"MaxPooling 2D",
+            "output_shape":"None, 124, 124, 4",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"conv2d_22",
+            "layer_cat":"Conv2D",
+            "output_shape":"None, 124, 124, 32",
+            "param_num":"160"
+          },
+          {
+            "layer_type":"activation_34",
+            "layer_cat":"Activation",
+            "output_shape":"None, 124, 124, 32",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"max_pooling2d_22",
+            "layer_cat":"MaxPooling 2D",
+            "output_shape":"None, 62, 62, 32",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"conv2d_23",
+            "layer_cat":"Conv2D",
+            "output_shape":"None, 62, 62, 32",
+            "param_num":"1056"
+          },
+          {
+            "layer_type":"activation_35",
+            "layer_cat":"Activation",
+            "output_shape":"None, 62, 62, 32",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"max_pooling2d_23",
+            "layer_cat":"MaxPooling 2D",
+            "output_shape":"None, 31, 31, 32",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"conv2d_24",
+            "layer_cat":"Conv2D",
+            "output_shape":"None, 31, 31, 32",
+            "param_num":"1056"
+          },
+          {
+            "layer_type":"activation_36",
+            "layer_cat":"Activation",
+            "output_shape":"None, 31, 31, 32",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"max_pooling2d_24",
+            "layer_cat":"MaxPooling 2D",
+            "output_shape":"None, 15, 15, 32",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"flatten_6",
+            "layer_cat":"Flatten",
+            "output_shape":"None, 7200",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"dense_12",
+            "layer_cat":"Dense",
+            "output_shape":"None, 32",
+            "param_num":"230432"
+          },
+          {
+            "layer_type":"activation_37",
+            "layer_cat":"Activation",
+            "output_shape":"None, 32",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"dense_13",
+            "layer_cat":"Dense",
+            "output_shape":"None, 32",
+            "param_num":"1056"
+          },
+          {
+            "layer_type":"activation_38",
+            "layer_cat":"Activation",
+            "output_shape":"None, 32",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"dense_14",
+            "layer_cat":"Dense",
+            "output_shape":"None, 3",
+            "param_num":"99"
+          },
+          {
+            "layer_type":"activation_39",
+            "layer_cat":"Activation",
+            "output_shape":"None, 3",
+            "param_num":"0"
+          }
+        ],
+          "total_params":"233,971",
+          "trainable_params":"233,971",
+          "non_trainable_params":"0"
+        }
+      }
+    },
+    {
+      "5C128N2D": {
+        "rank": 4,
+        "model_name": "5C128N2D",
+        "model_fullname": "5-conv-128-nodes-2-dense",
+        "model_filename": "5-conv-128-nodes-2-dense-1583918748.h5",
+        "lowest_validation_loss": 0.24518,
+        "highest_validation_acc": 0.9116,
+        "model_props":{
+          "conv":5,
+          "nodes":128,
+          "dense":2
+        },
+        "model_profile":{
+          "model_desc_name":"sequential_9",
+          "model_table": [
+          {
+            "layer_type":"conv2d_34",
+            "layer_cat":"Conv2D",
+            "output_shape":"None, 248, 248, 5",
+            "param_num":"140"
+          },
+          {
+            "layer_type":"activation_53",
+            "layer_cat":"Activation",
+            "output_shape":"None, 248, 248, 5",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"max_pooling2d_34",
+            "layer_cat":"MaxPooling 2D",
+            "output_shape":"None, 124, 124, 5",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"conv2d_35",
+            "layer_cat":"Conv2D",
+            "output_shape":"None, 124, 124, 128",
+            "param_num":"768"
+          },
+          {
+            "layer_type":"activation_54",
+            "layer_cat":"Activation",
+            "output_shape":"None, 124, 124, 128",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"max_pooling2d_35",
+            "layer_cat":"MaxPooling 2D",
+            "output_shape":"None, 62, 62, 128",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"conv2d_36",
+            "layer_cat":"Conv2D",
+            "output_shape":"None, 62, 62, 128",
+            "param_num":"16512"
+          },
+          {
+            "layer_type":"activation_55",
+            "layer_cat":"Activation",
+            "output_shape":"None, 62, 62, 128",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"max_pooling2d_36",
+            "layer_cat":"MaxPooling 2D",
+            "output_shape":"None, 31, 31, 128",
+            "param_num":"16512"
+          },
+          {
+            "layer_type":"activation_56",
+            "layer_cat":"Activation",
+            "output_shape":"None, 31, 31, 128",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"max_pooling2d_37",
+            "layer_cat":"MaxPooling 2D",
+            "output_shape":"None, 15, 15, 128",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"conv2d_38",
+            "layer_cat":"Conv2D",
+            "output_shape":"None, 15, 15, 128",
+            "param_num":"16512"
+          },
+          {
+            "layer_type":"activation_57",
+            "layer_cat":"Activation",
+            "output_shape":"None, 15, 15, 128",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"max_pooling2d_38",
+            "layer_cat":"MaxPooling 2D",
+            "output_shape":"None, 7, 7, 128",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"flatten_9",
+            "layer_cat":"Flatten",
+            "output_shape":"None, 6272",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"dense_19",
+            "layer_cat":"Dense",
+            "output_shape":"None, 128",
+            "param_num":"802944"
+          },
+          {
+            "layer_type":"activation_58",
+            "layer_cat":"Activation",
+            "output_shape":"None, 128",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"dense_20",
+            "layer_cat":"Dense",
+            "output_shape":"None, 128",
+            "param_num":"16512"
+          },
+          {
+            "layer_type":"activation_59",
+            "layer_cat":"Activation",
+            "output_shape":"None, 128",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"dense_21",
+            "layer_cat":"Dense",
+            "output_shape":"None, 3",
+            "param_num":"387"
+          },
+          {
+            "layer_type":"activation_60",
+            "layer_cat":"Dense",
+            "output_shape":"None, 3",
+            "param_num":"0"
+          }
+        ],
+          "total_params":"870,287",
+          "trainable_params":"870,287",
+          "non_trainable_params":"0"
+        }
+      }
+    },
+    {
+      "4C32N0D": {
+        "rank": 5,
+        "model_name": "4C32N0D",
+        "model_fullname": "4-conv-32-nodes-0-dense",
+        "model_filename": "4-conv-32-nodes-0-dense-1583918136.h5",
+        "lowest_validation_loss": 0.24782,
+        "highest_validation_acc": 0.9171,
+        "model_props":{
+          "conv":4,
+          "nodes":32,
+          "dense":0
+        },
+        "model_profile":{
+          "model_desc_name":"sequential_9",
+          "model_table": [
+          {
+            "layer_type":"conv2d_17",
+            "layer_cat":"Conv2D",
+            "output_shape":"None, 248, 248, 4",
+            "param_num":"112"
+          },
+          {
+            "layer_type":"activation_28",
+            "layer_cat":"Activation",
+            "output_shape":"None, 248, 248, 4",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"max_pooling2d_17",
+            "layer_cat":"MaxPooling 2D",
+            "output_shape":"None, 124, 124, 4",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"conv2d_18",
+            "layer_cat":"Conv2D",
+            "output_shape":"None, 124, 124, 32",
+            "param_num":"160"
+          },
+          {
+            "layer_type":"activation_29",
+            "layer_cat":"Activation",
+            "output_shape":"None, 124, 124, 32",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"max_pooling2d_18",
+            "layer_cat":"MaxPooling 2D",
+            "output_shape":"None, 62, 62, 32",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"conv2d_19",
+            "layer_cat":"Conv2D",
+            "output_shape":"None, 62, 62, 32",
+            "param_num":"1056"
+          },
+          {
+            "layer_type":"activation_30",
+            "layer_cat":"Activation",
+            "output_shape":"None, 62, 62, 32",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"max_pooling2d_19",
+            "layer_cat":"MaxPooling 2D",
+            "output_shape":"None, 31, 31, 32",
+            "param_num":"1056"
+          },
+          {
+            "layer_type":"conv2d_20",
+            "layer_cat":"Conv2D",
+            "output_shape":"None, 31, 31, 32",
+            "param_num":"1056"
+          },
+          {
+            "layer_type":"activation_31",
+            "layer_cat":"Activation",
+            "output_shape":"None, 31, 31, 32",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"max_pooling2d_20",
+            "layer_cat":"MaxPooling 2D",
+            "output_shape":"None, 31, 31, 32",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"flatten_5",
+            "layer_cat":"Flatten",
+            "output_shape":"None, 7200",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"dense_11",
+            "layer_cat":"Dense",
+            "output_shape":"None, 3",
+            "param_num":"21603"
+          },
+          {
+            "layer_type":"activation_32",
+            "layer_cat":"Activation",
+            "output_shape":"None, 3",
+            "param_num":"0"
+          }
+        ],
+          "total_params":"23,987",
+          "trainable_params":"23,987",
+          "non_trainable_params":"0"
+        }
+      }
+    },
+    {
+      "4C16N0D": {
+        "rank": 6,
+        "model_name": "4C16N0D",
+        "model_fullname": "4-conv-16-nodes-0-dense",
+        "model_filename": "4-conv-16-nodes-0-dense-1583917885.h5",
+        "lowest_validation_loss": 0.293,
+        "highest_validation_acc": 0.9006,
+        "model_props":{
+          "conv":4,
+          "nodes":16,
+          "dense":0
+        },
+        "model_profile":{
+          "model_desc_name":"sequential_3",
+          "model_table": [
+          {
+            "layer_type":"conv2d_9",
+            "layer_cat":"Conv2D",
+            "output_shape":"None, 248, 248, 4",
+            "param_num":"112"
+          },
+          {
+            "layer_type":"activation_17",
+            "layer_cat":"Activation",
+            "output_shape":"None, 248, 248, 4",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"max_pooling2d_9",
+            "layer_cat":"MaxPooling 2D",
+            "output_shape":"None, 124, 124, 4",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"conv2d_10",
+            "layer_cat":"Conv2D",
+            "output_shape":"None, 124, 124, 16",
+            "param_num":"80"
+          },
+          {
+            "layer_type":"activation_18",
+            "layer_cat":"Activation",
+            "output_shape":"None, 124, 124, 16",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"max_pooling2d_10",
+            "layer_cat":"MaxPooling 2D",
+            "output_shape":"None, 62, 62, 16",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"conv2d_11",
+            "layer_cat":"Conv2D",
+            "output_shape":"None, 62, 62, 16",
+            "param_num":"272"
+          },
+          {
+            "layer_type":"activation_19",
+            "layer_cat":"Activation",
+            "output_shape":"None, 62, 62, 16",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"max_pooling2d_11",
+            "layer_cat":"MaxPooling 2D",
+            "output_shape":"None, 31, 31, 16",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"conv2d_12",
+            "layer_cat":"Conv2D",
+            "output_shape":"None, 31, 31, 16",
+            "param_num":"272"
+          },
+          {
+            "layer_type":"activation_20",
+            "layer_cat":"Activation",
+            "output_shape":"None, 31, 31, 16",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"max_pooling2d_12",
+            "layer_cat":"MaxPooling 2D",
+            "output_shape":"None, 15, 15, 16",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"flatten_3",
+            "layer_cat":"Flatten",
+            "output_shape":"None, 3600",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"dense_8",
+            "layer_cat":"Dense",
+            "output_shape":"None, 3",
+            "param_num":"10803"
+          },
+          {
+            "layer_type":"activation_21",
+            "layer_cat":"Activation",
+            "output_shape":"None, 3",
+            "param_num":"0"
+          }
+        ],
+          "total_params":"11,539",
+          "trainable_params":"11,539",
+          "non_trainable_params":"0"
+        }
+      }
+    },
+    {
+      "4C16N1D": {
+        "rank": 7,
+        "model_name": "4C16N1D",
+        "model_fullname": "4-conv-16-nodes-1-dense",
+        "model_filename": "4-conv-16-nodes-1-dense-1583918010.h5",
+        "lowest_validation_loss": 0.29454,
+        "highest_validation_acc": 0.9006,
+        "model_props":{
+          "conv":4,
+          "nodes":16,
+          "dense":1
+        },
+        "model_profile":{
+          "model_desc_name":"sequential_4",
+          "model_table": [
+          {
+            "layer_type":"conv2d_13",
+            "layer_cat":"Conv2D",
+            "output_shape":"None, 248, 248, 4",
+            "param_num":"112"
+          },
+          {
+            "layer_type":"activation_22",
+            "layer_cat":"Activation",
+            "output_shape":"None, 248, 248, 4",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"max_pooling2d_13",
+            "layer_cat":"MaxPooling 2D",
+            "output_shape":"None, 124, 124, 4",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"conv2d_14",
+            "layer_cat":"Conv2D",
+            "output_shape":"None, 124, 124, 16",
+            "param_num":"80"
+          },
+          {
+            "layer_type":"activation_23",
+            "layer_cat":"Activation",
+            "output_shape":"None, 124, 124, 16",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"max_pooling2d_14",
+            "layer_cat":"MaxPooling 2D",
+            "output_shape":"None, 62, 62, 16",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"conv2d_15",
+            "layer_cat":"Conv2D",
+            "output_shape":"None, 62, 62, 16",
+            "param_num":"272"
+          },
+          {
+            "layer_type":"activation_24",
+            "layer_cat":"Activation",
+            "output_shape":"None, 62, 62, 16",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"max_pooling2d_15",
+            "layer_cat":"MaxPooling 2D",
+            "output_shape":"None, 31, 31, 16",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"conv2d_16",
+            "layer_cat":"Conv2D",
+            "output_shape":"None, 31, 31, 16",
+            "param_num":"272"
+          },
+          {
+            "layer_type":"activation_25",
+            "layer_cat":"Activation",
+            "output_shape":"None, 31, 31, 16",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"max_pooling2d_16",
+            "layer_cat":"MaxPooling 2D",
+            "output_shape":"None, 15, 15, 16",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"flatten_4",
+            "layer_cat":"Flatten",
+            "output_shape":"None, 3600",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"dense_9",
+            "layer_cat":"Dense",
+            "output_shape":"None, 16",
+            "param_num":"57616"
+          },
+          {
+            "layer_type":"activation_26",
+            "layer_cat":"Activation",
+            "output_shape":"None, 16",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"dense_10",
+            "layer_cat":"Dense",
+            "output_shape":"None, 3",
+            "param_num":"51"
+          },
+          {
+            "layer_type":"activation_27",
+            "layer_cat":"Activation",
+            "output_shape":"None, 3",
+            "param_num":"0"
+          }
+        ],
+          "total_params":"58,403",
+          "trainable_params":"58,403",
+          "non_trainable_params":"0"
+        }
+      }
+    },
+    {
+      "3C64N1D": {
+        "rank": 8,
+        "model_name": "3C64N1D",
+        "model_fullname": "3-conv-64-nodes-1-dense",
+        "model_filename": "3-conv-64-nodes-1-dense-1583917688.h5",
+        "lowest_validation_loss": 0.34423,
+        "highest_validation_acc": 0.895,
+        "model_props":{
+          "conv":3,
+          "nodes":64,
+          "dense":1
+        },
+        "model_profile":{
+          "model_desc_name":"sequential_4",
+          "model_table": [
+          {
+            "layer_type":"conv2d_6",
+            "layer_cat":"Conv2D",
+            "output_shape":"None, 248, 248, 3",
+            "param_num":"84"
+          },
+          {
+            "layer_type":"activation_12",
+            "layer_cat":"Activation",
+            "output_shape":"None, 248, 248, 3",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"max_pooling2d_6",
+            "layer_cat":"MaxPooling 2D",
+            "output_shape":"None, 124, 124, 3",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"conv2d_7",
+            "layer_cat":"Conv2D",
+            "output_shape":"None, 124, 124, 64",
+            "param_num":"256"
+          },
+          {
+            "layer_type":"activation_13",
+            "layer_cat":"Activation",
+            "output_shape":"None, 124, 124, 64",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"max_pooling2d_7",
+            "layer_cat":"MaxPooling 2D",
+            "output_shape":"None, 62, 62, 64",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"conv2d_8",
+            "layer_cat":"Conv2D",
+            "output_shape":"None, 62, 62, 64",
+            "param_num":"4160"
+          },
+          {
+            "layer_type":"activation_14",
+            "layer_cat":"Activation",
+            "output_shape":"None, 62, 62, 64",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"max_pooling2d_8",
+            "layer_cat":"MaxPooling 2D",
+            "output_shape":"None, 31, 31, 64",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"flatten_2",
+            "layer_cat":"Flatten",
+            "output_shape":"None, 61504",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"dense_6",
+            "layer_cat":"Dense",
+            "output_shape":"None, 64",
+            "param_num":"3936320"
+          },
+          {
+            "layer_type":"dense_6",
+            "layer_cat":"Dense",
+            "output_shape":"None, 64",
+            "param_num":"3936320"
+          },
+          {
+            "layer_type":"activation_15",
+            "layer_cat":"Activation",
+            "output_shape":"None, 64",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"dense_7",
+            "layer_cat":"Dense",
+            "output_shape":"None, 3",
+            "param_num":"195"
+          },
+          {
+            "layer_type":"activation_16",
+            "layer_cat":"Activation",
+            "output_shape":"None, 3",
+            "param_num":"0"
+          }
+        ],
+          "total_params":"3,941,015",
+          "trainable_params":"3,941,015",
+          "non_trainable_params":"0"
+        }
+      }
+    },
+    {
+      "3C32N3D": {
+        "rank": 9,
+        "model_name": "3C32N3D",
+        "model_fullname": "3-conv-32-nodes-3-dense",
+        "model_filename": "3-conv-32-nodes-3-dense-1583917539.h5",
+        "lowest_validation_loss": 0.3656,
+        "highest_validation_acc": 0.8785,
+        "model_props":{
+          "conv":3,
+          "nodes":32,
+          "dense":3
+        },
+        "model_profile":{
+          "model_desc_name":"sequential_1",
+          "model_table": [
+          {
+            "layer_type":"conv2d_3",
+            "layer_cat":"Conv2D",
+            "output_shape":"None, 248, 248, 3",
+            "param_num":"84"
+          },
+          {
+            "layer_type":"activation_5",
+            "layer_cat":"Activation",
+            "output_shape":"None, 248, 248, 3",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"max_pooling2d_3",
+            "layer_cat":"MaxPooling 2D",
+            "output_shape":"None, 124, 124, 3",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"conv2d_4",
+            "layer_cat":"Conv2D",
+            "output_shape":"None, 124, 124, 32",
+            "param_num":"128"
+          },
+          {
+            "layer_type":"activation_6",
+            "layer_cat":"Activation",
+            "output_shape":"None, 124, 124, 32",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"max_pooling2d_4",
+            "layer_cat":"MaxPooling 2D",
+            "output_shape":"None, 62, 62, 32",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"conv2d_5",
+            "layer_cat":"Conv2D",
+            "output_shape":"None, 62, 62, 32",
+            "param_num":"1056"
+          },
+          {
+            "layer_type":"activation_7",
+            "layer_cat":"Activation",
+            "output_shape":"None, 62, 62, 32",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"max_pooling2d_5",
+            "layer_cat":"MaxPooling 2D",
+            "output_shape":"None, 31, 31, 32",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"flatten_1",
+            "layer_cat":"Flatten",
+            "output_shape":"None, 30752",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"dense_2",
+            "layer_cat":"Dense",
+            "output_shape":"None, 32",
+            "param_num":"984096"
+          },
+          {
+            "layer_type":"activation_8",
+            "layer_cat":"Activation",
+            "output_shape":"None, 32",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"dense_3",
+            "layer_cat":"Dense",
+            "output_shape":"None, 32",
+            "param_num":"1056"
+          },
+          {
+            "layer_type":"activation_9",
+            "layer_cat":"Activation",
+            "output_shape":"None, 32",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"dense_4",
+            "layer_cat":"Dense",
+            "output_shape":"None, 32",
+            "param_num":"1056"
+          },
+          {
+            "layer_type":"activation_10",
+            "layer_cat":"Activation",
+            "output_shape":"None, 32",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"dense_5",
+            "layer_cat":"Dense",
+            "output_shape":"None, 3",
+            "param_num":"99"
+          },
+          {
+            "layer_type":"activation_11",
+            "layer_cat":"Activation",
+            "output_shape":"None, 3",
+            "param_num":"0"
+          }
+        ],
+          "total_params":"987,575",
+          "trainable_params":"987,575",
+          "non_trainable_params":"0"
+        }
+      }
+    },
+    {
+      "3C32N1D": {
+        "rank": 10,
+        "model_name": "3C32N1D",
+        "model_fullname": "3-conv-32-nodes-1-dense",
+        "model_filename": "3-conv-32-nodes-1-dense-1583917291.h5",
+        "lowest_validation_loss": 0.37887,
+        "highest_validation_acc": 0.8729,
+        "model_props":{
+          "conv":3,
+          "nodes":32,
+          "dense":1
+        },
+        "model_profile":{
+          "model_desc_name":"sequential",
+          "model_table": [
+          {
+            "layer_type":"conv2d",
+            "layer_cat":"Conv2D",
+            "output_shape":"None, 248, 248, 3",
+            "param_num":"84"
+          },
+          {
+            "layer_type":"activation",
+            "layer_cat":"Activation",
+            "output_shape":"None, 248, 248, 3",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"max_pooling2d",
+            "layer_cat":"MaxPooling 2D",
+            "output_shape":"None, 124, 124, 3",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"conv2d_1",
+            "layer_cat":"Conv2D",
+            "output_shape":"None, 124, 124, 32",
+            "param_num":"128"
+          },
+          {
+            "layer_type":"activation_1",
+            "layer_cat":"Activation",
+            "output_shape":"None, 124, 124, 32",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"max_pooling2d_1",
+            "layer_cat":"MaxPooling 2D",
+            "output_shape":"None, 62, 62, 32",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"conv2d_2",
+            "layer_cat":"Conv2D",
+            "output_shape":"None, 62, 62, 32",
+            "param_num":"1056"
+          },
+          {
+            "layer_type":"activation_2",
+            "layer_cat":"Activation",
+            "output_shape":"None, 62, 62, 32",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"max_pooling2d_2",
+            "layer_cat":"MaxPooling 2D",
+            "output_shape":"None, 31, 31, 32",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"flatten",
+            "layer_cat":"Flatten",
+            "output_shape":"None, 30752",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"dense",
+            "layer_cat":"Dense",
+            "output_shape":"None, 32",
+            "param_num":"984096"
+          },
+          {
+            "layer_type":"activation_3",
+            "layer_cat":"Activation",
+            "output_shape":"None, 32",
+            "param_num":"0"
+          },
+          {
+            "layer_type":"dense_1",
+            "layer_cat":"Dense",
+            "output_shape":"None, 3",
+            "param_num":"99"
+          },
+          {
+            "layer_type":"activation_4",
+            "layer_cat":"Activation",
+            "output_shape":"None, 3",
+            "param_num":"0"
+          }
+        ],
+          "total_params":"985,463",
+          "trainable_params":"985,463",
+          "non_trainable_params":"0"
+        }
+      }
+    }
+  ]
+}
