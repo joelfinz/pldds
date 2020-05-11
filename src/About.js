@@ -28,7 +28,7 @@ const About = () => {
               <Typography variant="h2">Team</Typography>
                   </Col>
                   <Col>
-                    <Button size="large" style={{float:"right"}}>
+                    <Button size="large" style={{float:"right"}} onClick={()=>window.open("https://github.com/joelfinz/pldds")}>
                     <i className="fab fa-github"/>&nbsp;Source
                     </Button>
                   </Col>
