@@ -8,7 +8,7 @@ Paddy Leaf Disease Detection System (PLDDS) is web application made to help farm
 
 The master branch has code for React app and the backend branch has code for flask web server.
 
-# React App <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" style="width:75px" />
+# React App
 
 [TOC]
 
