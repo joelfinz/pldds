@@ -10,6 +10,7 @@ import {
   ListItemText,
   IconButton,
   Tooltip,
+  Button,
 } from "@material-ui/core";
 import { Row, Col } from "react-bootstrap";
 import Fade from "react-reveal/Fade";
@@ -18,11 +19,20 @@ const About = () => {
   return (
     <div>
       <Fade cascade>
-      <Card raised={true}>
+      <Card raised={true} style={{maxWidth:"500px",margin:"auto"}}>
         <CardContent>
           <Row>
-            <Col>
+              <Col>
+                <Row style={{alignItems:"center"}}>
+                  <Col>
               <Typography variant="h2">Team</Typography>
+                  </Col>
+                  <Col>
+                    <Button size="large" style={{float:"right"}}>
+                    <i className="fab fa-github"/>&nbsp;Source
+                    </Button>
+                  </Col>
+                </Row>
               <br />
               <List>
                 <ListItem>
@@ -169,47 +179,6 @@ const About = () => {
                 </ListItem>
             <br/>
               </List>
-            </Col>
-            <Col>
-              <Typography variant="h2">Project In-charge</Typography>
-              <List>
-                <ListItem>
-                <ListItemAvatar>
-                    <Avatar
-                    style={{ width: "100px", height: "100px", marginRight:"12px" }}
-                      // src="./images/devs/anay.jpg"
-                    />
-                  </ListItemAvatar>
-                <ListItemText
-                    primary={
-                      <Typography variant="h5">Asst. Prof. Kurien Thampy</Typography>
-                    }
-                    secondary={
-                      <React.Fragment>
-                        <Typography variant="subtitle2">Project Guide</Typography>
-                      </React.Fragment>
-                    }
-                  />
-                </ListItem>
-                <ListItem>
-                <ListItemAvatar>
-                    <Avatar
-                    style={{ width: "100px", height: "100px", marginRight:"12px" }}
-                      // src="./images/devs/anay.jpg"
-                    />
-                  </ListItemAvatar>
-                <ListItemText
-                    primary={
-                      <Typography variant="h5">Asst. Prof. Rini T Paul</Typography>
-                    }
-                    secondary={
-                      <React.Fragment>
-                        <Typography variant="subtitle2">Project Guide</Typography>
-                      </React.Fragment>
-                    }
-                  />
-                </ListItem>
-            </List>
             </Col>
           </Row>
           <Row>
