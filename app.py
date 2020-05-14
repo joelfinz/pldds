@@ -1,31 +1,28 @@
 from flask import Flask, request, jsonify, send_file, send_from_directory
 from flask_cors import CORS, cross_origin
+from pprint import pprint
 import tensorflow as tf
+import pandas as pd
 import numpy as np
 import cv2
+from os import system, name 
 import os
 import glob
 import json
+import tabulate
+
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
-CORS(app)
-
 app.config['UPLOAD_FOLDER'] = './uploads'
-
+CORS(app)
+# Check if the server is online
 @app.route('/', methods=['GET'])
 def index():
+    clearScreen()
     return jsonify({'message': 'Server online'})
 
-@app.route('/check', methods=['GET'])
-def check():
-    version = tf.version
-    print(version)
-    if(version):
-        return jsonify({'tensorflow': True})
-    else:
-        return jsonify({'tensorflow': False})
-
+# Save uploaded image to folder
 @app.route('/upload', methods=['POST'])
 @cross_origin()
 def upload():
@@ -35,7 +32,8 @@ def upload():
             filename = file.filename
             file.save(os.path.join(app.config['UPLOAD_FOLDER'],filename))
             return jsonify({'message': 'file uploaded successfully','filename':filename})
-        
+
+# List the uploaded files
 @app.route('/uploadedfiles', methods=['GET'])
 def listupload():
     files = glob.glob('./uploads/*.*')
@@ -43,6 +41,12 @@ def listupload():
     refined_list = []
     for file in files:
         refined_list.append(file[10:])
+    # OUTPUT TO TERMINAL
+    clearScreen()
+    print("List of uploaded files")
+    print("----------------------")
+    pprint(refined_list)
+    # OUTPUT TO JSON
     return jsonify({'uploads':refined_list})
 
 @app.route('/getimg/<path:filename>', methods=['GET'])
@@ -65,6 +69,13 @@ def deletefile(filename):
 def listmodels():
     with open('./models.json') as f:
         data = json.load(f)
+        # OUTPUT TO TERMINAL
+        clearScreen()
+        print("Model list")
+        print("----------")
+        df = pd.json_normalize(data["models"])
+        print(tabulate.tabulate(df, headers='keys', tablefmt='psql'))
+    # OUTPUT TO JSON
     return jsonify(data)
 
 @app.route('/testmodel/<filename>', methods=['POST'])
@@ -72,12 +83,11 @@ def testmodel(filename):
     data = request.get_json()
     if(data):
         selected_model = data['model']
+    else: # Set default model
+        selected_model='5-conv-32-nodes-1-dense-1583918600.h5'
     files = os.listdir('./uploads')
     if (filename):
-        if(data):
-            model = tf.keras.models.load_model(f'.//models//' + selected_model)
-        else:
-            model = tf.keras.models.load_model(f'.//models//5-conv-32-nodes-1-dense-1583918600.h5')
+        model = tf.keras.models.load_model(f'.//models//' + selected_model)
         img_array = cv2.imread(f'.//uploads//'+str(filename))
         img_array = cv2.cvtColor(img_array, cv2.COLOR_BGR2RGB)
 
@@ -95,6 +105,18 @@ def testmodel(filename):
         disease_data['brownspot'] = round(float(pred[0][0]*100),3)
         disease_data['leaf_blast'] = round(float(pred[0][1]*100),3)
         disease_data['bacterial_blight'] = round(float(pred[0][2]*100),3)
+        # OUTPUT IN TERMINAL
+        clearScreen()
+        print("Test Results")
+        print("------------")
+        print("Filename: "+str(filename))
+        print("Model used: "+selected_model)
+        print("Prediction: "+cat)
+        print("Accuracy:")
+        print(" Brown Spot: "+str(disease_data['brownspot']))
+        print(" Leaf Blast: "+str(disease_data['leaf_blast']))
+        print(" Bacterial Leaf Blight: "+str(disease_data['bacterial_blight']))
+        # OUTPUT IN JSON
         return jsonify({'category': cat,'Percentage':disease_data})
     else:
         return jsonify({'message':'you did not pass filename'})
@@ -124,8 +146,35 @@ def modeldetails(modelname):
     for model in models:
         setData = model.get(modelname)
         if(setData):
+            # OUTPUT IN TERMINAL
+            clearScreen()
+            print("Model Details")
+            print("--------------")
+            print("Model Name: "+ setData['model_name'])
+            print("Model Full Name: "+ setData['model_fullname'])
+            print("Model Filename: "+ setData['model_filename'])
+            print("Highest validation accuracy: "+ str(setData['highest_validation_acc']))
+            print("Lowest validation loss: "+ str(setData['lowest_validation_loss']))
+            print(" ")
+            print("Model Summary")
+            print("--------------")
+            print("Model description: "+setData['model_profile']['model_desc_name'])
+            print("No. of non trainable params: "+setData['model_profile']['non_trainable_params'])
+            print("No. of trainable params: "+setData['model_profile']['trainable_params'])
+            print("Total params: "+setData['model_profile']['total_params'])
+            df = pd.json_normalize(setData["model_profile"]["model_table"])
+            print(tabulate.tabulate(df, headers='keys', tablefmt='psql'))
+            # OUTPUT TO JSON
             return jsonify(setData)
-    # return jsonify(models)
+
+# FUNCTION TO CLEAR TERMINAL SCREEN
+def clearScreen(): 
+    # for windows 
+    if name == 'nt': 
+        _ = system('cls') 
+    # for mac and linux(here, os.name is 'posix') 
+    else: 
+        _ = system('clear') 
 
 if __name__ == '__main__':  
     app.run('0.0.0.0',debug = True)

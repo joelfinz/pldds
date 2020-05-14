@@ -42,3 +42,5 @@ termcolor==1.1.0
 urllib3==1.25.8
 Werkzeug==1.0.0
 wrapt==1.12.1
+pandas==1.0.3
+tabulate==0.8.7
